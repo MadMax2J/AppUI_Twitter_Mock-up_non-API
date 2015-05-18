@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TwitterClientGui.TweetCellTemplate">
+  <grid id="27dc6" binding="rootTweet" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="535" height="80"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="ebaa4" class="javax.swing.JLabel" binding="lblProfilePic">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="10"/>
+          <horizontalTextPosition value="0"/>
+          <icon value="Images/@John_Byrne.png"/>
+          <text value="@John_Byrne"/>
+          <verticalTextPosition value="3"/>
+        </properties>
+      </component>
+      <hspacer id="34513">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <component id="a21e" class="javax.swing.JLabel" binding="lblTweet">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="&lt;html&gt;Whether it is Twitter, Facebook, Yelp or just &lt;br&gt;a post to co-workers or business officials, the &lt;br&gt;number of actual characters matters. Bob Build&lt;/html&gt;"/>
+        </properties>
+      </component>
+      <component id="223b3" class="javax.swing.JLabel" binding="lblFav">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="Images/notFavStar.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ca914" class="javax.swing.JLabel" binding="lblReTweet">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="Images/notRetweeted.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <hspacer id="fe03e">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="23d99">
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+    </children>
+  </grid>
+</form>
