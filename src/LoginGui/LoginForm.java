@@ -30,7 +30,7 @@ public class LoginForm extends JFrame{
         loginAttempts = 0;
 
         /**
-         * Only one action is preformed on this window; to validate the users' login attempt.
+         * Only one action is performed on this window; to validate the users' login attempt.
          */
         btnLogin.addActionListener(new ActionListener() {
             @Override
@@ -40,19 +40,20 @@ public class LoginForm extends JFrame{
                 String username = txtUsername.getText();
                 String password = String.valueOf(txtPassword.getPassword());
 
-                //// Testing
-                //System.out.println(username + " **** " + password);
-
                 if (username.equals("test") && password.equals("test")) {
                     setVisible(false);
-                    JOptionPane.showMessageDialog(LoginForm.this, "Welcome " + WordUtils.capitalize(username) + "!");
+                    JOptionPane.showMessageDialog(LoginForm.this, "Welcome " +
+                            WordUtils.capitalize(username) + "!");
                     new TwitterClient();
 
                 } else {
                     if (loginAttempts < 3) {
-                        JOptionPane.showMessageDialog(LoginForm.this, "Access Denied!\nAttempts remaining: " + (3 - loginAttempts));
+                        JOptionPane.showMessageDialog(LoginForm.this,
+                                "Access Denied!\nAttempts remaining: " + (3 - loginAttempts));
+
                     } else { //On third failed login attempt.
-                        JOptionPane.showMessageDialog(LoginForm.this, "Access Denied!\nToo many failed Login attempts!\nGoodbye!");
+                        JOptionPane.showMessageDialog(LoginForm.this,
+                                "Access Denied!\nToo many failed Login attempts!\nGoodbye!");
                         System.exit(0);
                     }
                 }
