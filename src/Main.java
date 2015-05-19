@@ -3,8 +3,10 @@ import LoginGui.LoginForm;
 import javax.swing.*;
 
 /**
- * Twitter Client Mock-up Application Launcher
+ * Application User Interfaces Assignment II
  * by John Byrne - R00050076
+ *
+ * Twitter Client Mock-up Application Launcher
  */
 public class Main {
     public static void main(String[] args){

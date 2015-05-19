@@ -57,7 +57,6 @@ public class LoginForm extends JFrame{
                         System.exit(0);
                     }
                 }
-
             }
         });
 

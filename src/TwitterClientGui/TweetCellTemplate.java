@@ -5,7 +5,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 /**
- * Created by jbyrne on 12/05/2015.
+ * This TweetCellTemplate class is a customised JPanel for use in my JList.
+ * by John Byrne - R00050076
  */
 public class TweetCellTemplate extends JPanel {
     private JPanel rootTweet;
@@ -14,22 +15,19 @@ public class TweetCellTemplate extends JPanel {
     private JLabel lblFav;
     private JLabel lblReTweet;
 
-
     /**
      * This constructor builds the JList Element.
      */
     public TweetCellTemplate(){
         setBorder(new EmptyBorder(5, 5, 5, 5));
-
         setLayout(new GridBagLayout());
-
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
 
         gridBagConstraints.anchor = GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1;
         add(lblProfilePic,gridBagConstraints);
 
-        add(lblTweet);
+        add(lblTweet);  //added without gridBagConstraints so that it will float
 
         gridBagConstraints.anchor= GridBagConstraints.EAST;
         add(lblFav,gridBagConstraints);

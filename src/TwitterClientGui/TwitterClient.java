@@ -145,8 +145,9 @@ public class TwitterClient extends JFrame {
 
         /**
          * Re-Tweet Button Action Listener
-         * Sets the isReTweeted flag of the selected Tweet
-         * The TweetCellRenderer looks after updating the Re-Tweeted icon once repaint() is called.
+         * Sets the isReTweeted flag of the selected Tweet.
+         * The TweetCellRenderer looks after updating the Re-Tweeted
+         * icon once the re-tweeted tweet is displayed.
          */
         btnReTweet.addActionListener(new ActionListener() {
             @Override
@@ -161,9 +162,8 @@ public class TwitterClient extends JFrame {
                         if (!tweet.isReTweeted()) {
                             tweet.setIsReTweeted(true);
                         }
-                        defaultListModel.add(0, new Tweet("@John_Byrne", "<html>" + tweet.getFromUser() + " said: <br>" + tweet.getTweetMessage(), false, false));
-                        repaint();
-
+                        defaultListModel.add(0, new Tweet("@John_Byrne", "<html>" + tweet.getFromUser() +
+                                " said: <br>" + tweet.getTweetMessage(), false, false));
                     }
                 }
             }
@@ -172,7 +172,7 @@ public class TwitterClient extends JFrame {
         /**
          * Send Tweet Button Action Listener
          * If the message is not too long, it takes the content
-         * of the Tweet TextArea and add a new Tweet to the feed.
+         * of the Tweet TextArea and adds a new Tweet to the feed.
          */
         btnSendTweet.addActionListener(new ActionListener() {
             @Override
@@ -246,6 +246,7 @@ public class TwitterClient extends JFrame {
             }
         });
 
+
         /**
          * Open MenuItem Action Listener.
          * It produces an Option Dialogue box to get confirmation.
@@ -275,7 +276,7 @@ public class TwitterClient extends JFrame {
         /**
          * Save MenuItem Action Listener.
          * It produces an Option Dialogue box to get confirmation.
-         * If confirmed, it save the twitter feed to file.
+         * If confirmed, it saves the twitter feed to the "savedTweetSession.twc" file.
          */
         save.addActionListener(new ActionListener() {
             @Override
@@ -298,7 +299,6 @@ public class TwitterClient extends JFrame {
                     for (int index = 0; index < defaultListModel.getSize(); index++) {
                         Tweet tweet = (Tweet) defaultListModel.get(index);
                         sessionTweets.add(tweet);
-                        System.out.println(tweet.getTweetMessage());
                     }
 
                     try {
@@ -327,7 +327,7 @@ public class TwitterClient extends JFrame {
             ois.close();
         } catch (IOException ex) {
             ex.printStackTrace();
-            //Could throw in a Dialogue box to see there was an issue, but I don't think it's necessary for this app.
+            //Could throw in a Dialogue box to say there was an issue, but I don't think it's necessary for this app.
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         }
@@ -374,7 +374,8 @@ public class TwitterClient extends JFrame {
     }
 
     /**
-     * This method takes in a String and add html <br> to it, to allow for multiple lines in the Tweet Cell JLabel
+     * This method takes in a String and adds html <br> tags to it,
+     * to allow for multiple lines in the Tweet Cell JLabel
      * @param tweetText     The source Tweet text
      * @return              The returned multi-lined html text
      */

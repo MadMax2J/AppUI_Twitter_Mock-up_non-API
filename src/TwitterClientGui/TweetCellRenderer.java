@@ -15,13 +15,13 @@ public class TweetCellRenderer implements ListCellRenderer {
     public Component getListCellRendererComponent(JList list, Object value, int index,
                                                   boolean isSelected, boolean cellHasFocus) {
 
+        //This is the Colour used when a cellHasFocus
         Color cellSelectedColor = new Color (190, 193, 199);
 
         //Get the data and cast it as a Tweet object
         Tweet tweet = (Tweet)value;
             /* From Tweet object
             this.fromUser = fromUser;
-            this.userProfilePic = userProfilePic;
             this.tweetMessage = tweetMessage;
             this.isFav = isFav;
             this.isReTweeted = isReTweeted;
@@ -42,7 +42,7 @@ public class TweetCellRenderer implements ListCellRenderer {
         cell.getLblProfilePic().setText(fromUser);          //Set the profile name
         cell.getLblTweet().setText(tweetMessage);           //Set the Tweet message
 
-        //The cells default to ifFav and isReTweeted == false, so is I set isFav to true and back again to false,
+        //The cells default to isFav and isReTweeted == false, so if I set isFav to true and back again to false,
         //the cell will return to default configuration, so I don't need to repaint the isNotFav icon at runtime.
         if(isFav){
             ImageIcon favIcon = createImageIcon("../Images/isFavStar.png", "a Favourite Tweet");
